@@ -4,7 +4,7 @@ import matplotlib.pyplot
 import math
 from mpl_toolkits import mplot3d
 
-class TMkNNClassifier():
+class KNNClassifier():
 
 	plot_data=False
 	classifier_type='Classification'
@@ -56,13 +56,13 @@ my_data_set=numpy.array([[33.1,110.3,67,20,56,'Sunny'],[21.4,265.9,61,15,40,'Sun
 
 my_query_dataset=[17.0,780.3,57,65,80]
 
-my_classifier=TMkNNClassifier(dataset=my_data_set,query_dataset=my_query_dataset,classifier_type='Classification',plot_data=False)
+my_classifier=KNNClassifier(dataset=my_data_set,query_dataset=my_query_dataset,classifier_type='Classification',plot_data=False)
 result=my_classifier.process()
 print('Data points : {} belongs to class :{}'.format(my_query_dataset,result))
 
 new_dataset=numpy.array([[10,20,'A'],[20,25,'A'],[15,20,'A'],[30,45,'A'],[10,10,'A'],[25,20,'A'],[30,55,'A'],[40,60,'A'],[90,100,'A'],[80,60,'A'],[110,120,'B'],[120,125,'B'],[115,120,'B'],[130,145,'B'],[110,110,'B'],[125,120,'B'],[130,155,'B'],[140,160,'B'],[80,120,'B']])
 
 new_query=[80,100]
-my_classifier=TMkNNClassifier(dataset=new_dataset,query_dataset=new_query,classifier_type='Classification',plot_data=False)
+my_classifier=KNNClassifier(dataset=new_dataset,query_dataset=new_query,classifier_type='Classification',plot_data=False)
 result=my_classifier.process()
 print('Data points : {} belongs to class :{}'.format(new_query,result))
